@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+.container{
+    background-color: white;
+    padding: 10px;
+}
+.container nav{
+    padding: 10px;
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    background-color: white;
+}
+.container nav h1{
+    font-weight: 100;
+    font-size: 2em;
+    padding: 30px 30px 30px 50px;
+}
+.container nav .sign{
+    position: absolute;
+    top: 0;
+    right: 120px;
+    padding: 50px;
+    transition: 0.3s;
+}
+.container nav .sign #area button{
+    padding: 10px 25px;
+    background-color:#FFC200;
+    border: none;
+    font-weight: 900;
+    margin: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.container nav .sign #area button:hover,.container .main .sign-in button:hover{
+    background-color:#ffd54b;
+}
+.container .main{
+    padding: 150px 50px 50px 50px;
+    background: url("./Resources/White BG Removed/drawkit-transport-scene-3.svg");
+    background-position: 80px 150px;
+    background-repeat: no-repeat;
+    background-size: 55%;
+    height: 100vh;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+.container .main .sign-in{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 20px;
+    margin-right: 100px;
+}
+.container .main .sign-in h2{
+    color: #7EBAD2;
+    font-size: 30px;
+    text-shadow: 1px 1px black;
+}
+.container .main .sign-in p{
+    font-weight: 900;
+    font-size: 13px;
+}
+.container .main .sign-in input{
+    margin: 15px;
+    padding: 10px 20px;
+    font-weight: 900;
+    border-radius: 10px;
+    border: 2px solid rgb(190, 190, 190);
+    width: 100%;
+    transition: 0.3s;
+    outline: none;
+}
+.container .main .sign-in input:focus,.container .main .sign-in input:valid{
+    border-color: #FFC200;
+}
+.container .main .sign-in button{
+    background-color: #FFC200;
+    border: none;
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 20px;
+    font-weight: 900;
+    transition: 0.3s;
+    margin-bottom: 10px;
+}
+.container nav .sign .point{
+    display: none;
+    font-size: 30px;
+    color: #c79a07;
+    transform: rotate(180deg);
+}
+@media (max-width:900px) {
+    .container nav,.container nav h1{
+        padding: 10px;
+    }
+    .container nav .sign{
+        margin: 0;
+        padding: 20px;
+        right: 30px;
+        top:5px;
+    }
+    .container nav .sign .point{
+        display: block;
+    }
+    .container nav .sign .area{
+        display: none;
+    }
+    .container .main{
+        background-size:contain;
+        object-fit: fill;
+        background-position: center;
+    }
+    .container .main .sign-in{
+        margin: 0;
+        padding: 20px;
+        backdrop-filter: blur(3px);
+        box-shadow: 0 0 40px 10px rgb(172, 172, 172);
+    }
+}
